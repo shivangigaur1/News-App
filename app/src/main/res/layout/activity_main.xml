@@ -7,204 +7,218 @@
     android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center_vertical"
-        android:layout_gravity="center_vertical"
-        android:padding="16dp">
+        android:layout_height="match_parent">
 
-        <!-- Row 1 (2 buttons) -->
+        <ImageView
+            android:id="@+id/settingsIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="26dp"
+            android:contentDescription="Settings"
+            android:src="@drawable/ic_settings" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="16dp">
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:padding="16dp"
+            android:layout_below="@id/settingsIcon">
 
+            <!-- Row 1 (2 buttons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/generalButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="General"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#4CAF50"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/businessButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#2196F3"
+                    android:padding="12dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+            <!-- Row 2 (3 buttons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/sportsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sports"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#9C27B0"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/healthButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#FF5722"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/scienceButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Science"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#009688"
+                    android:padding="12dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+            <!-- Row 3 (2 buttons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/entertainmentButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entertainment"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#E91E63"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/technologyButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#3F51B5"
+                    android:padding="12dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+            <!-- Row 4 (3 buttons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="16dp">
+
+                <Button
+                    android:id="@+id/politicsButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Politics"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#607D8B"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/foodButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#4CAF50"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/travelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Travel"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#FF9800"
+                    android:padding="12dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+            <!-- Row 5 (2 buttons) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:id="@+id/environmentButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Environment"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#F44336"
+                    android:padding="12dp"
+                    android:textAllCaps="false"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/educationButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Education"
+                    android:textColor="@android:color/white"
+                    android:backgroundTint="#00BCD4"
+                    android:padding="12dp"
+                    android:textAllCaps="false"/>
+            </LinearLayout>
+
+            <!-- Next Button -->
             <Button
-                android:id="@+id/generalButton"
+                android:id="@+id/nextButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="General"
+                android:text="Next ➡"
                 android:textColor="@android:color/white"
-                android:backgroundTint="#4CAF50"
-                android:padding="12dp"
+                android:backgroundTint="#000000"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textSize="18sp"
                 android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/businessButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Business"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#2196F3"
-                android:padding="12dp"
-                android:textAllCaps="false"/>
+                android:layout_gravity="center_horizontal"
+                android:elevation="8dp"/>
         </LinearLayout>
+    </RelativeLayout>
 
-        <!-- Row 2 (3 buttons) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="16dp">
-
-            <Button
-                android:id="@+id/sportsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Sports"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#9C27B0"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/healthButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Health"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#FF5722"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/scienceButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Science"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#009688"
-                android:padding="12dp"
-                android:textAllCaps="false"/>
-        </LinearLayout>
-
-        <!-- Row 3 (2 buttons) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="16dp">
-
-            <Button
-                android:id="@+id/entertainmentButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Entertainment"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#E91E63"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/technologyButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Technology"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#3F51B5"
-                android:padding="12dp"
-                android:textAllCaps="false"/>
-        </LinearLayout>
-
-        <!-- Row 4 (3 buttons) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="16dp">
-
-            <Button
-                android:id="@+id/politicsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Politics"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#607D8B"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/foodButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Food"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#4CAF50"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/travelButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Travel"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#FF9800"
-                android:padding="12dp"
-                android:textAllCaps="false"/>
-        </LinearLayout>
-
-        <!-- Row 5 (2 buttons) -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="32dp">
-
-            <Button
-                android:id="@+id/environmentButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Environment"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#F44336"
-                android:padding="12dp"
-                android:textAllCaps="false"
-                android:layout_marginEnd="8dp"/>
-
-            <Button
-                android:id="@+id/educationButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Education"
-                android:textColor="@android:color/white"
-                android:backgroundTint="#00BCD4"
-                android:padding="12dp"
-                android:textAllCaps="false"/>
-        </LinearLayout>
-
-        <!-- Next Button -->
-        <Button
-            android:id="@+id/nextButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Next ➡"
-            android:textColor="@android:color/white"
-            android:backgroundTint="#000000"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:paddingTop="12dp"
-            android:paddingBottom="12dp"
-            android:textSize="18sp"
-            android:textAllCaps="false"
-            android:layout_gravity="center_horizontal"
-            android:elevation="8dp"/>
-
-
-
-    </LinearLayout>
 </ScrollView>
