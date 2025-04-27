@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -20,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/bkgsky"
             android:contentDescription="News Image" />
 
         <!-- News Title -->
@@ -57,6 +56,8 @@
             android:textColor="@android:color/holo_blue_dark"
             android:paddingTop="8dp"
             android:paddingBottom="8dp"/>
+
+        <!-- Listen Button (Doesn't expand the card) -->
         <Button
             android:id="@+id/buttonListen"
             android:layout_width="wrap_content"
@@ -68,7 +69,7 @@
             android:backgroundTint="@android:color/holo_blue_dark"
             android:textColor="@android:color/white"
             android:layout_marginTop="8dp"
-            />
+            android:layout_gravity="start" />
 
     </LinearLayout>
 

@@ -16,6 +16,6 @@ interface NewsService {
     ): Call<NewsResponse>
 
     companion object {
-        const val API_KEY = "7e6d6b39f4cd44d0a3241cba601b06ef" // Replace with your actual API Key
+        const val API_KEY = "b27c40eb1f4f47c1a999383670f62722" // Replace with your actual API Key
     }
 }
