@@ -73,7 +73,7 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(intent)
             finishAffinity()
         }
-        
+
         setupKeywordDateSearch()
     }
 
