@@ -35,12 +35,9 @@
         <activity android:name=".SettingsActivity" />
 
         <activity android:name=".NewsActivity" />
-        <activity android:name=".NewsWebViewActivity" />
 
-        <!-- 🔥 Add BreakingNewsService here -->
-
-
-
+        <activity
+            android:name=".SearchResultsActivity"/>
 
     </application>
 
