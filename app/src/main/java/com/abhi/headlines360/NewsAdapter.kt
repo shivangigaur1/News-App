@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -77,12 +78,18 @@ class NewsAdapter(
             onItemClick(article.url)
         }
 
+        // Disable TTS button if battery is low
+        holder.buttonListen.isEnabled = !PowerHelper.isBatteryLow(context)
         holder.buttonListen.setOnClickListener {
-            if (textToSpeech?.isSpeaking == true) {
-                textToSpeech?.stop()
-                holder.buttonListen.text = "Listen"
+            if (!PowerHelper.isBatteryLow(context)) {
+                if (textToSpeech?.isSpeaking == true) {
+                    textToSpeech?.stop()
+                    holder.buttonListen.text = "Listen"
+                } else {
+                    speakOut(article.title, article.description, holder)
+                }
             } else {
-                speakOut(article.title, article.description, holder)
+                Toast.makeText(context, "TTS disabled in power saving mode", Toast.LENGTH_SHORT).show()
             }
         }
     }
